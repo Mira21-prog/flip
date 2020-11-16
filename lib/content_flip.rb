@@ -14,7 +14,7 @@ def get_content(content, file, bypass_html = false)
   template = File.read('page.html.erb')
   renderer = ERB.new(template).result
 
-  File.open("#{file}.html", 'w') do |f|
+  File.open(File.join("#{file}.html", 'w')) do |f|
     f.write(renderer)
   end
 end
