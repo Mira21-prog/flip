@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'content_flip'
-  s.version     = '0.0.1'
+  s.version     = '2.1.1'
   s.date        = '2010-04-28'
   s.summary     = 'Add content'
   s.description = 'Add content to body'
