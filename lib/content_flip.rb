@@ -11,10 +11,12 @@ def get_content(content, file, bypass_html = false)
   end
 
   file = file.empty? ? 'index' : file
-  template = File.read('page.html.erb')
+  bar_path = File.join(File.dirname(__FILE__), 'page.html.erb')
+  puts bar_path
+  template = File.read(bar_path)
   renderer = ERB.new(template).result
 
-  File.open("#{file}.html", 'w') do |f|
+  File.open("./tmp/#{file}.html", 'w') do |f|
     f.write(renderer)
   end
 end
