@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.date = "2010-04-28"
   s.description = "Add content to body".freeze
   s.email = "matsakovamira156@gmail.com".freeze
-  s.files = ["lib/content_flip.rb".freeze, "page.html.erb".freeze]
+  s.files = ["lib/content_flip.rb".freeze, "lib/page.html.erb".freeze]
   s.homepage = "https://rubygems.org/gems/hola".freeze
   s.licenses = ["MIT".freeze]
   s.rubygems_version = "3.0.8".freeze
