@@ -1,3 +1,7 @@
+```
+git clone https://github.com/Mira21-prog/flip.git
+```
+
 1. Run in console 
 ```
 gem build content_flip.gemspec 
@@ -16,13 +20,24 @@ require 'content_flip'
 ```
 5. Run command in irb 
 ```
-get_content("sjsj")
+get_content("Hello")
 ```
-Create 'index.html' file in /tmp 
+Created 'index.html' file in `/tmp` dir
 
 - if need to define a new file with content then run
 ```
-get_content("sjsj", "new_file")
+get_content("Hello", "new_file")
 ```
-"new_file.html" was been created in /tmp dir
+"new_file.html" was been created in `/tmp` dir
 
+Check exist files in irb
+```
+File.exist?("tmp/index.html")
+```
+```
+File.exist?("tmp/new_file.html")
+```
+can read files
+```
+File.read("tmp/index.html")
+```

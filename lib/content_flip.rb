@@ -10,7 +10,7 @@ def get_content(content, file = 'index', bypass_html = false)
     @content = a.gsub(%r{</?[^>]*>}, '')
   end
 
-  bar_path = File.join(File.dirname(__FILE__), 'page.html.erb')
+  bar_path = File.join(File.dirname(__FILE__), 'page.html.erb')#lib/page.html.erb
   puts bar_path
   template = File.read(bar_path)
   renderer = ERB.new(template).result
