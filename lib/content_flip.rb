@@ -2,7 +2,7 @@
 
 require 'erb'
 
-def get_content(content, file, bypass_html = false)
+def get_content(content, file = 'index', bypass_html = false)
   if bypass_html
     @content = content
   else
@@ -10,12 +10,12 @@ def get_content(content, file, bypass_html = false)
     @content = a.gsub(%r{</?[^>]*>}, '')
   end
 
-  file = file.empty? ? 'index' : file
-  bar_path = File.join(File.dirname(__FILE__), 'page.html.erb')
+  bar_path = File.join(File.dirname(__FILE__), 'page.html.erb')#lib/page.html.erb
   puts bar_path
   template = File.read(bar_path)
   renderer = ERB.new(template).result
 
+  Dir.mkdir('./tmp') unless Dir.exists?('./tmp')
   File.open("./tmp/#{file}.html", 'w') do |f|
     f.write(renderer)
   end
